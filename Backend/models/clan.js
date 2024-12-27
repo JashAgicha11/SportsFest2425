@@ -1,8 +1,9 @@
-const mongoose = require('mongoose');
+// backend/models/Clan.js
+const mongoose = require("mongoose");
 
 const ClanSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  points: { type: Number, default: 0 },
+  points: { type: Number, required: true }
 });
 
-module.exports = mongoose.model('Clan', ClanSchema);
+module.exports = mongoose.model("Clan", ClanSchema);

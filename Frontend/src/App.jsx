@@ -9,8 +9,8 @@ import Clans from "./Pages/Clans";
 import AboutUs from "./Pages/AboutUs";
 import Fixtures from "./Pages/Fixtures";
 import ClanDetails from "./components/ClanDetails";
-import AdminLogin from "./Pages/AdminLogin";
-import AdminPage from "./Pages/Adminpage";
+import AdminLogin from "./components/AdminLogin";
+
 
 function App() {
   return (
@@ -61,13 +61,10 @@ function App() {
           element={<PublicOnlyRoute Component={Fixtures} />}
         />
         <Route
-          path="/admin-login"
+          path="/admin/login"
           element={<PublicOnlyRoute Component={AdminLogin} />}
         />
-        <Route
-          path="/admin"
-          element={<PublicOnlyRoute Component={AdminPage} />}
-        />
+     
       </Routes>
     </BrowserRouter>
   );

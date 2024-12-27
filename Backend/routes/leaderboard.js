@@ -1,14 +1,15 @@
-const express = require('express');
+// backend/routes/leaderboard.js
+const express = require("express");
 const router = express.Router();
-const Clan = require('../models/Clan');
+const Clan = require("../models/Clan");
 
-// Get leaderboard
-router.get('/leaderboard', async (req, res) => {
+// Route to get leaderboard data
+router.get("/", async (req, res) => {
   try {
-    const clans = await Clan.find().sort({ points: -1 });
+    const clans = await Clan.find().sort({ points: -1 }); // Sort by points descending
     res.json(clans);
-  } catch (err) {
-    res.status(500).json({ message: 'Server Error' });
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching leaderboard" });
   }
 });
 
