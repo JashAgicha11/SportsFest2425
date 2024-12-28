@@ -4,7 +4,9 @@ import { devtools } from "zustand/middleware";
 const Store = (set)  =>({
  selected :"",
  selectedClan: "",
-    setClan: (clan) => set({ selectedClan: clan }),
+ toastrMsg: "",
+ setToastr: (toastrMsg) => set({ toastrMsg }, false, "setToastr"),
+ setClan: (clan) => set({ selectedClan: clan }),
  setSelected:(selected) => set({selected},false,"setSelected")
 });
 

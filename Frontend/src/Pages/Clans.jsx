@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
-import ClanBox from "../components/clanBox";
+import ClanBox from "../components/ClanBox";
 import { useNavigate } from "react-router-dom";
 
 

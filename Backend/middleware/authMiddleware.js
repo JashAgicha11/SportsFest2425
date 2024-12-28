@@ -9,12 +9,12 @@ const verifyAdmin = (req, res, next) => {
   }
 
   try {
-    const decoded = jwt.verify(token, "secret_key");  // Replace "secret_key" with your actual secret
+    const decoded = jwt.verify(token, "sportsfestjashagicha");  // Replace "secret_key" with your actual secret
     req.admin = decoded;
     next();
   } catch (err) {
     return res.status(401).json({ message: "Token is not valid" });
   }
 };
-
+    
 module.exports = verifyAdmin;

@@ -35,7 +35,7 @@ const Navbar = ({selected,bg}) => {
       <h2 className='cursor-pointer hover:text-white-400' onClick={()=>handleNavigate("/about")}>About Us</h2>
     </div>
     <div className='w-full flex justify-center items-center h-[60%] static'>
-        <div className={`h-full border-2 border-[#3f4755] drop-shadow-lg border-t-0 w-[20%] bg-[#202B38] bg-${bg} flex justify-center items-center rounded-b-[2.5rem]`}>
+        <div className={`h-full border-2 border-[#3f4755] drop-shadow-lg border-t-0 w-[20%] ${bg ? `bg-${bg}` : "bg-[#202B38]"} flex justify-center items-center rounded-b-[2.5rem]`}>
           <h2 className='text-white text-[1.8rem] w-full text-center tracking-widest font-stencil'>{selected}</h2>
         </div>
     </div>

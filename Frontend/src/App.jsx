@@ -2,6 +2,11 @@ import "./App.css";
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import PublicOnlyRoute from "./Utils/PublicOnlyRoute";
 import React, { useEffect } from "react";
+import { ThemeProvider } from "@mui/material";
+import theme from "./theme";
+import SnackbarManager from "./components/SnackbarManager";
+
+
 // pages
 import Home from "./Pages/Home";
 import LeaderBoard from "./Pages/Leaderboard";
@@ -10,10 +15,13 @@ import AboutUs from "./Pages/AboutUs";
 import Fixtures from "./Pages/Fixtures";
 import ClanDetails from "./components/ClanDetails";
 import AdminLogin from "./components/AdminLogin";
+import ClanUpdateModal from "./components/ClanUpdateModal";
 
 
 function App() {
   return (
+    <ThemeProvider theme={theme}>
+    <SnackbarManager />
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<PublicOnlyRoute Component={Home} />} />
@@ -53,6 +61,10 @@ function App() {
           }
         />
         <Route
+          path="/update"
+          element={<PublicOnlyRoute Component={ClanUpdateModal} />}
+        />
+        <Route
           path="/about"
           element={<PublicOnlyRoute Component={AboutUs} />}
         />
@@ -67,6 +79,7 @@ function App() {
      
       </Routes>
     </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

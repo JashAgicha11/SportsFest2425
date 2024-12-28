@@ -21,20 +21,5 @@ router.post("/login", (req, res) => {
   }
 });
 
-// Protected route to update clan points
-router.put("/update", verifyAdmin, async (req, res) => {
-  const { clanId, points } = req.body;
-
-  try {
-    const clan = await Clan.findById(clanId);
-    if (!clan) return res.status(404).json({ message: "Clan not found" });
-
-    clan.points += points; // Add points (can be +3, +5, etc.)
-    await clan.save();
-    res.json(clan);
-  } catch (error) {
-    res.status(500).json({ message: "Error updating points" });
-  }
-});
 
 module.exports = router;
