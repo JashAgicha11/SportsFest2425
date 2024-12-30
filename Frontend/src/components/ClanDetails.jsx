@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 const ClanDetails = ({ clan }) => {
   return (
     <div className="w-full min-h-max bg-[#171923] flex flex-col items-center">
-      <div className="w-full static h-[12vh]">
+      <div className="w-full sticky  scroll-p-10 top-0 h-[12vh]">
         <Navbar selected={clan} bg={clan} />
       </div>
       <div className="w-[90%] my-[5rem] flex flex-col gap-10 justify-around items-center">

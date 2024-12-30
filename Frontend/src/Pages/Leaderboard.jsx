@@ -3,10 +3,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../components/Navbar";
 import ClanUpdateModal from "../components/ClanUpdateModal";
+import useStore from "../store/store";
 
 const Leaderboard = () => {
   const [leaderboard, setLeaderboard] = useState([]);
   const [isClanUpdateOpen, setisClanUpdateOpen] = useState(false);
+  const {isAdminLogin,setisAdminLogin} = useStore();
 
   useEffect(() => {
     // Fetch leaderboard data from the backend
@@ -21,14 +23,19 @@ const Leaderboard = () => {
   }, []);
 
   return (
-    <div className="w-full h-[100vh] bg-[#171923] flex flex-col justify-between">
+  <div className={`w-full h-[100vh] bg-[#171923] flex flex-col ${isAdminLogin ? "justify-between": "justify-normal"}`}>
       <div className="w-full h-[12%] sticky top-0">
         <Navbar selected={"LeaderBoard"} />
       </div>
-      <div className="min-w-[90vh] flex flex-col justify-center items-center h-[50vh] relative top-[2rem] overflow-hidden border-collapse  rounded-[2rem]">
+      <div
+  className={`min-w-[90vh] flex flex-col justify-center items-center h-[50vh] relative top-[2rem] overflow-hidden ${
+    isAdminLogin ? "mt-0" : "mt-20"
+  } border-collapse rounded-[2rem]`}
+>
+
         <table className="w-[80%] rounded-[2rem] overflow-hidden shadow-xl">
           <thead>
-            <tr className="bg-gray-200 w-full  text-gray-800 flex justify-center items-center overflow-hidden rounded-t-[2rem] border-b-2 border-black text-xl">
+            <tr className="bg-gray-200 w-full mt-  text-gray-800 flex justify-center items-center overflow-hidden rounded-t-[2rem] border-b-2 border-black text-xl">
               <th className=" w-[20%] text-center  px-4 py-3  font-clash">
                 Rank
               </th>
@@ -60,7 +67,8 @@ const Leaderboard = () => {
           </tbody>
         </table>
       </div>
-      <div className="static h-[20vh] flex justify-center">
+      {isAdminLogin ? (
+        <div className="static h-[20vh] flex justify-center">
         <button
           onClick={() => setisClanUpdateOpen(true)}
           type="submit"
@@ -68,8 +76,9 @@ const Leaderboard = () => {
         >
           Update
         </button>
-      </div>
+      </div> 
 
+      ): null}
       <ClanUpdateModal isOpen={isClanUpdateOpen} onClose={() => setisClanUpdateOpen(false)}/>
     </div>
   );
