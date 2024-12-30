@@ -16,10 +16,8 @@ const AdminLogin = () => {
       const response = await axios.post('http://localhost:5000/api/admin/login', { email, password });
       const { token } = response.data;
 
-      // Store the JWT token in localStorage
       localStorage.setItem('adminToken', token);
 
-      // Redirect to the admin dashboard or leaderboard page
       navigate('/leaderboard');
     } catch (err) {
       setError('Invalid credentials. Please try again.');
