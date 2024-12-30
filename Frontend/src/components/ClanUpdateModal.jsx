@@ -2,15 +2,19 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Button } from "@mui/material";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import axios from "axios";
 import useStore from "../store/store";
 
-const ClanUpdateModal = ({ isOpen, onClose }) => {
-    const {setToastr} = useStore()
+const ClanUpdateModal = ({ isOpen, onClose, updateLeaderboard }) => {
+  const { setToastr } = useStore();
   const [clan, setClan] = useState({
     Clan: "",
     PlusPoints: "",
     MinusPoints: "",
   });
+
+  const [selectedClan, setSelectedClan] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const dataEmpty = () => {
     setClan({
@@ -18,6 +22,7 @@ const ClanUpdateModal = ({ isOpen, onClose }) => {
       PlusPoints: "",
       MinusPoints: "",
     });
+    setSelectedClan("");
   };
 
   const handleClose = () => {
@@ -30,8 +35,6 @@ const ClanUpdateModal = ({ isOpen, onClose }) => {
     setClan({ ...clan, [name]: value });
   };
 
-  const [selectedClan, setSelectedClan] = useState("");
-
   const handleInputColor = (e) => {
     const clanValue = e.target.value;
     setSelectedClan(clanValue);
@@ -41,30 +44,48 @@ const ClanUpdateModal = ({ isOpen, onClose }) => {
   const getBackgroundClass = (clan) => {
     switch (clan) {
       case "Titans":
-        return "bg-Titans"; // Titans color
+        return "bg-Titans";
       case "Mavericks":
-        return "bg-Mavericks"; // Mavericks color
+        return "bg-Mavericks";
       case "Predators":
-        return "bg-Predators"; // Predators color
+        return "bg-Predators";
       case "Warriors":
-        return "bg-Warriors"; // Warriors color
+        return "bg-Warriors";
       default:
-        return "bg-gray-400"; // Default color
+        return "bg-gray-400";
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const updatedClan = {
-      ...clan,
-      PlusPoints: parseInt(clan.PlusPoints, 10),
-      MinusPoints: parseInt(clan.MinusPoints, 10),
+      clanName: clan.Clan,
+      action: clan.PlusPoints ? "increase" : "decrease",
+      points: parseInt(clan.PlusPoints || clan.MinusPoints, 10),
     };
-    setToastr("Clan updated successfully");
-    console.log(updatedClan);
-    handleClose();
+  
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/leaderboard/update",
+        updatedClan
+      );
+  
+      setToastr("Clan updated successfully");
+  
+      if (updateLeaderboard) {
+        updateLeaderboard(response.data.leaderboard); 
+      }
+  
+      handleClose();
+    } catch (error) {
+      console.error("Error updating clan points:", error);
+      setToastr("Failed to update points. Please try again.");
+    }
   };
+  
+
   if (!isOpen) return null;
+
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 font-poppins">
       <div
@@ -119,6 +140,7 @@ const ClanUpdateModal = ({ isOpen, onClose }) => {
                   name="PlusPoints"
                   value={clan.PlusPoints}
                   onChange={handleInputChange}
+                  min="0"
                 />
                 <input
                   type="number"
@@ -127,14 +149,16 @@ const ClanUpdateModal = ({ isOpen, onClose }) => {
                   name="MinusPoints"
                   value={clan.MinusPoints}
                   onChange={handleInputChange}
+                  min="0"
                 />
               </div>
               <div className="flex justify-center">
                 <button
                   type="submit"
                   className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-md transition duration-300"
+                  disabled={isLoading}
                 >
-                  Submit
+                  {isLoading ? "Submitting..." : "Submit"}
                 </button>
               </div>
             </form>

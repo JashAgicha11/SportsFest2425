@@ -26,7 +26,9 @@ const Leaderboard = () => {
         console.error("Error fetching leaderboard data:", error);
       });
   }, [setisAdminLogin]);
-
+  const updateLeaderboard = (updatedLeaderboard) => {
+    setLeaderboard(updatedLeaderboard);
+  };
   return (
     <div
       className={`w-full h-[100vh] bg-[#171923] flex flex-col ${
@@ -87,6 +89,7 @@ const Leaderboard = () => {
       <ClanUpdateModal
         isOpen={isClanUpdateOpen}
         onClose={() => setisClanUpdateOpen(false)}
+        updateLeaderboard={updateLeaderboard} 
       />
     </div>
   );
