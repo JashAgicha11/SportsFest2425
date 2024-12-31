@@ -64,28 +64,27 @@ const ClanUpdateModal = ({ isOpen, onClose, updateLeaderboard }) => {
       action: clan.PlusPoints ? "increase" : "decrease",
       points: parseInt(clan.PlusPoints || clan.MinusPoints, 10),
     };
-  
+
     try {
       const response = await axios.post(
         "http://localhost:5000/api/leaderboard/update",
         updatedClan
       );
-  
+
       setToastr("Clan updated successfully");
-  
+
       if (updateLeaderboard) {
-        updateLeaderboard(response.data.leaderboard); 
+        updateLeaderboard(response.data.leaderboard);
       }
-  
+
       handleClose();
     } catch (error) {
       console.error("Error updating clan points:", error);
       setToastr("Failed to update points. Please try again.");
-    }finally {
-      setIsLoading(false); 
+    } finally {
+      setIsLoading(false);
     }
   };
-  
 
   if (!isOpen) return null;
 
