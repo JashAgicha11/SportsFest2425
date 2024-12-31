@@ -4,10 +4,10 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const router = express.Router();
 const Clan = require("../models/Clan");
-const verifyAdmin = require("../middleware/authMiddleware");  // Import the middleware
+const verifyAdmin = require("../middleware/authMiddleware"); 
 
 const ADMIN_EMAIL = "sportsfest@gmail.com";
-const ADMIN_PASSWORD = "admin123"; // Change this to a better password in production
+const ADMIN_PASSWORD = "admin123"; 
 
 // Simple admin login route
 router.post("/login", (req, res) => {

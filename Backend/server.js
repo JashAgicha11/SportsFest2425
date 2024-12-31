@@ -6,7 +6,7 @@ const dotenv = require("dotenv"); // Load environment variables
 const adminRoutes = require("./routes/admin");
 const leaderboardRoutes = require("./routes/leaderboard");
 
-dotenv.config(); // Load variables from the .env file
+dotenv.config(); 
 const app = express();
 const PORT = 5000;
 

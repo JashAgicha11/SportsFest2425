@@ -12,21 +12,27 @@ const Leaderboard = () => {
   useEffect(() => {
     const token = localStorage.getItem("adminToken");
     if (token) {
-      setisAdminLogin(true); 
+      setisAdminLogin(true);
     } else {
-      setisAdminLogin(false); 
+      setisAdminLogin(false);
     }
 
     axios
       .get("http://localhost:5000/api/leaderboard")
       .then((response) => {
-        setLeaderboard(response.data);
+        const sortedLeaderboard = response.data.sort(
+          (a, b) => b.points - a.points
+        ); // Sort on the frontend
+        setLeaderboard(sortedLeaderboard);
       })
       .catch((error) => {
         console.error("Error fetching leaderboard data:", error);
       });
   }, [setisAdminLogin]);
 
+  const updateLeaderboard = (updatedLeaderboard) => {
+    setLeaderboard(updatedLeaderboard);
+  };
   return (
     <div
       className={`w-full h-[100vh] bg-[#171923] flex flex-col ${
@@ -57,7 +63,7 @@ const Leaderboard = () => {
             {leaderboard.map((clan, index) => (
               <tr
                 key={clan._id}
-                className={`hover:text-black border-b-2 border-black transition-colors flex justify-center items-center w-[100%]`}
+                className={`bg-${clan.clanName} hover:text-black border-b-2 border-black transition-colors flex justify-center items-center w-[100%]`}
               >
                 <td className="px-4 py-3 text-3xl text-white w-[20%] text-center font-medium">
                   {index + 1}
@@ -87,6 +93,7 @@ const Leaderboard = () => {
       <ClanUpdateModal
         isOpen={isClanUpdateOpen}
         onClose={() => setisClanUpdateOpen(false)}
+        updateLeaderboard={updateLeaderboard}
       />
     </div>
   );
