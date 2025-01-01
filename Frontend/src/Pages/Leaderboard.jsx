@@ -3,11 +3,14 @@ import axios from "axios";
 import Navbar from "../components/Navbar";
 import ClanUpdateModal from "../components/ClanUpdateModal";
 import useStore from "../store/store";
+import { useNavigate } from "react-router-dom";
+
 
 const Leaderboard = () => {
   const [leaderboard, setLeaderboard] = useState([]);
   const [isClanUpdateOpen, setisClanUpdateOpen] = useState(false);
   const { isAdminLogin, setisAdminLogin } = useStore();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const token = localStorage.getItem("adminToken");
@@ -54,7 +57,7 @@ const Leaderboard = () => {
               <th className="w-[40%] px-4 py-3 border-x-2 border-black font-clash text-center">
                 Clan
               </th>
-              <th className="w-[40%] px-4 py-3 font-clash text-center">
+              <th onClick={() => navigate("/admin/login")} className="w-[40%] px-4 py-3 font-clash text-center">
                 Points
               </th>
             </tr>
