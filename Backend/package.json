@@ -1,9 +1,9 @@
 {
-  "scripts": {
-    "dev": "node server.js", 
+ "scripts": {
+    "dev": "node server.js",
     "start": "node server.js",
-  "build": "echo 'No build step required for this project'"},
-
+    "build": "echo 'No build step required for this project'"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",

@@ -3,7 +3,6 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const router = express.Router();
-const Clan = require("../models/Clan");
 const verifyAdmin = require("../middleware/authMiddleware"); 
 
 const ADMIN_EMAIL = "sportsfest@gmail.com";
