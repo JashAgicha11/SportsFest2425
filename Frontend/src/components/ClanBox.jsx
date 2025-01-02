@@ -50,7 +50,7 @@ const ClanBox = ({ colour, ClanName }) => {
       ref={boxRef}
       onClick={() => handleClick(colour)}
       className={classNames(
-        "w-[45%] h-[40%] cursor-pointer rounded-lg text-white flex justify-start items-center border border-opacity-40 drop-shadow-lg transform transition-transform duration-300",
+        "sm:w-[45%] w-[90%] h-[40%] z-10 cursor-pointer rounded-lg text-white flex justify-start items-center border border-opacity-40 drop-shadow-lg transform transition-transform duration-300",
         {
           "bg-Titans ": colour === "Titans",
           "bg-Mavericks ": colour === "Mavericks",

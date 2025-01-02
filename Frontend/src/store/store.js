@@ -6,6 +6,8 @@ const Store = (set)  =>({
  selectedClan: "",
  toastrMsg: "",
  isAdminLogin: false,
+ menuOpen: false,
+ setMenuOpen: (state) => set({ menuOpen: state }, false, "setMenuOpen"),
  setToastr: (toastrMsg) => set({ toastrMsg }, false, "setToastr"),
  setClan: (clan) => set({ selectedClan: clan }),
  setSelected:(selected) => set({selected},false,"setSelected"),

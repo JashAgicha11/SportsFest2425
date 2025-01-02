@@ -94,7 +94,7 @@ const ClanUpdateModal = ({ isOpen, onClose, updateLeaderboard }) => {
         onClick={handleClose}
         className="absolute inset-0 bg-black opacity-50"
       ></div>
-      <div className="w-[60%] h-[60%] z-10 flex justify-around items-center flex-col rounded-2xl">
+      <div className="sm:w-[60%] sm:h-[60%] w-[80%] h-[70%] z-10 flex justify-around items-center flex-col rounded-2xl">
         <span className="w-full h-[100%] flex justify-center items-center flex-col">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -104,7 +104,7 @@ const ClanUpdateModal = ({ isOpen, onClose, updateLeaderboard }) => {
             className="bg-bg-blue p-6 w-[100%] flex flex-col gap-3 h-full rounded-md shadow-md overflow-y-auto overflow-hidden"
           >
             <span className="flex justify-center pl-5 h-[15%] tracking-wide static items-center bg-nav-blue font-clash rounded-md border-2 border-[#3f4755]">
-              <h2 className="text-2xl text-nowrap text-white font-bold w-full flex justify-center">
+              <h2 className="text-base sm:text-2xl text-nowrap text-white font-bold w-full flex justify-center">
                 Update the Points of the Clan
               </h2>
               <Button onClick={handleClose}>
@@ -113,9 +113,9 @@ const ClanUpdateModal = ({ isOpen, onClose, updateLeaderboard }) => {
             </span>
             <form
               onSubmit={handleSubmit}
-              className="h-4/5 flex flex-col justify-center items-center gap-5"
+              className="sm:h-4/5 h-[70%] flex flex-col justify-center items-center sm:gap-5  gap-10"
             >
-              <div className="w-[62%] h-1/5 flex justify-center items-center">
+              <div className="sm:w-[62%] h-1/5 sm:h-1/5 w-[90%] flex justify-center items-center">
                 <select
                   name="Clan"
                   value={selectedClan}
@@ -134,10 +134,10 @@ const ClanUpdateModal = ({ isOpen, onClose, updateLeaderboard }) => {
                   <option className="bg-Warriors" value="Warriors">Warriors</option>
                 </select>
               </div>
-              <div className="w-full h-[15%] flex justify-center items-center gap-3 text-black placeholder:text-black">
+              <div className="sm:w-full w-[90%] h-[15%] flex flex-col sm:flex-row justify-center items-center gap-3 text-black placeholder:text-black">
                 <input
                   type="number"
-                  className="w-[30%] h-full p-3 rounded-lg bg-gray-400 placeholder:text-slate-600 border-2 border-[#3f4755] sm:text-lg text-sm"
+                  className="sm:w-[30%] w-full h-full p-3 rounded-lg bg-gray-400 placeholder:text-slate-600 border-2 border-[#3f4755] sm:text-lg text-sm"
                   placeholder="Increase Points"
                   name="PlusPoints"
                   value={clan.PlusPoints}
@@ -146,7 +146,7 @@ const ClanUpdateModal = ({ isOpen, onClose, updateLeaderboard }) => {
                 />
                 <input
                   type="number"
-                  className="w-[30%] h-full p-3 rounded-lg bg-gray-400 placeholder:text-slate-600 border-2 border-[#3f4755] sm:text-lg text-sm"
+                  className="sm:w-[30%] w-full h-full p-3 rounded-lg bg-gray-400 placeholder:text-slate-600 border-2 border-[#3f4755] sm:text-lg text-sm"
                   placeholder="Decrease Points"
                   name="MinusPoints"
                   value={clan.MinusPoints}
@@ -154,7 +154,7 @@ const ClanUpdateModal = ({ isOpen, onClose, updateLeaderboard }) => {
                   min="0"
                 />
               </div>
-              <div className="flex justify-center">
+              <div className="flex justify-center sm:pt-0 pt-5">
                 <button
                   type="submit"
                   className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-md transition duration-300"

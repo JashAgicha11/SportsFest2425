@@ -7,20 +7,20 @@ const ClanDetails = ({ clan }) => {
       <div className="w-full sticky  scroll-p-10 top-0 h-[12vh]">
         <Navbar selected={clan} bg={clan} />
       </div>
-      <div className="w-[90%] my-[5rem] flex flex-col gap-10 justify-around items-center">
-        <div className="w-full h-[70vh] flex justify-around items-center">
-          <div className="w-[30%] h-[100%] bg-white rounded-[2rem]"></div>
-          <div className="w-[30%] h-[100%] bg-white rounded-[2rem]"></div>
+      <div className="w-[90%] sm:my-[5rem] flex flex-col gap-5 sm:gap-10 justify-around items-center">
+        <div className="w-full h-[90vh] sm:h-[70vh] flex flex-col sm:flex-row justify-around items-center">
+          <div className="sm:w-[30%] w-[80%] h-[45%]  sm:h-[100%] bg-white rounded-[2rem]"></div>
+          <div className="sm:w-[30%] w-[80%] h-[45%] sm:h-[100%] bg-white rounded-[2rem]"></div>
         </div>
-        <div className="w-[70%] h-[55vh] flex justify-around items-center ">
-          <div className="w-[40%] h-[100%] bg-white rounded-[2rem]"></div>
-          <div className="w-[40%] h-[100%] bg-white rounded-[2rem]"></div>
+        <div className="sm:w-[70%] w-[90%] h-[85vh] sm:h-[55vh] flex flex-col sm:flex-row justify-around items-center ">
+          <div className="w-[80%] sm:w-[40%] h-[45%] sm:h-[100%] bg-white rounded-[2rem]"></div>
+          <div className="w-[80%] sm:w-[40%] h-[45%] sm:h-[100%] bg-white rounded-[2rem]"></div>
         </div>
-        <div className="w-full h-[45vh] flex justify-around items-center ">
-          <div className="w-[22%] h-[100%] bg-white rounded-[2rem]"></div>
-          <div className="w-[22%] h-[100%] bg-white rounded-[2rem]"></div>
-          <div className="w-[22%] h-[100%] bg-white rounded-[2rem]"></div>
-          <div className="w-[22%] h-[100%] bg-white rounded-[2rem]"></div>
+        <div className="w-[85%] h-[150vh] sm:w-full sm:h-[45vh] flex flex-col sm:flex-row justify-around items-center ">
+          <div className="w-[80%] h-[23%] sm:w-[22%] sm:h-[100%] bg-white rounded-[2rem]"></div>
+          <div className="w-[80%] h-[23%] sm:w-[22%] sm:h-[100%] bg-white rounded-[2rem]"></div>
+          <div className="w-[80%] h-[23%] sm:w-[22%] sm:h-[100%] bg-white rounded-[2rem]"></div>
+          <div className="w-[80%] h-[23%] sm:w-[22%] sm:h-[100%] bg-white rounded-[2rem]"></div>
         </div>
       </div>
     </div>

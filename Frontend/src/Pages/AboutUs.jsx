@@ -4,6 +4,8 @@ import { gsap } from "gsap";
 import { OrbitControls, Sparkles } from "@react-three/drei"
 import * as THREE from "three";
 import Navbar from "../components/Navbar";
+import useStore from "../store/store";
+
 
 // Rotating 3D Sports Logo Component
 function RotatingCube (){
@@ -29,7 +31,7 @@ function RotatingCube (){
 
 export default function AboutUs() {
   const containerRef = useRef();
-
+  const {setMenuOpen} = useStore();
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
@@ -57,12 +59,12 @@ export default function AboutUs() {
   return (
     <div
       ref={containerRef}
-      className="bg-gradient-to-br h-[100vh]  from-gray-800 via-gray-900 to-black text-white min-h-screen flex flex-col items-center justify-center overflow-hidden"
+      className="bg-gradient-to-br h-[100vh]  from-gray-800 via-gray-900 to-black text-white min-h-screen flex flex-col items-center overflow-hidden"
     >
-      <div className="h-[12vh] w-full static top-0">
+      <div className="h-[12vh] w-full sticky top-0">
         <Navbar selected={"About Us"} />
       </div>
-      <div className="w-full max-h-[88vh] md:w-2/3 lg:w-1/2 text-center mt-20">
+      <div onClick={() => setMenuOpen(false)} className="sm:w-full w-[80%] max-h-[88vh] md:w-2/3 lg:w-1/2 text-center mt-20">
         <h1 className="text-5xl text-nowrap font-extrabold mb-8 about-text text-yellow-400">
           The Sports Club Family
         </h1>
@@ -78,7 +80,7 @@ export default function AboutUs() {
           spectators alike.
         </p>
       </div>
-      <div className="canvas-container w-72 h-[100%] about-text">
+      <div className="canvas-container w-[100%] h-[100%] about-text flex items-center">
         <Canvas
           style={{
             height: "inherit",
