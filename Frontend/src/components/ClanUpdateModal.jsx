@@ -67,7 +67,7 @@ const ClanUpdateModal = ({ isOpen, onClose, updateLeaderboard }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/leaderboard/update",
+        "https://sports-fest2425.vercel.app/api/leaderboard/update",
         updatedClan
       );
 
