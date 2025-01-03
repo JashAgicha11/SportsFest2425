@@ -16,7 +16,7 @@ const AdminLogin = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("https://sports-fest2425.vercel.app/api/admin", { email, password });
+      const response = await axios.post("https://sports-fest2425.vercel.app/api/admin/login", { email, password });
       const { token } = response.data;
 
       localStorage.setItem('adminToken', token);
