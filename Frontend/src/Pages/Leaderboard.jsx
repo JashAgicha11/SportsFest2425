@@ -39,7 +39,7 @@ const Leaderboard = () => {
   return (
     <div  className="max-w-full h-screen bg-[#171923] flex flex-col">
       <div className="w-full h-[12%] sticky top-0">
-        <Navbar selected={"LeaderBoard"} />
+        <Navbar selected={"Leaderboard"} />
       </div>
       <div
       onClick={() => setMenuOpen(false)}

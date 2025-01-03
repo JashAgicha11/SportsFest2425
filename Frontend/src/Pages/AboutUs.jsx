@@ -61,11 +61,11 @@ export default function AboutUs() {
       ref={containerRef}
       className="bg-gradient-to-br h-[100vh]  from-gray-800 via-gray-900 to-black text-white min-h-screen flex flex-col items-center overflow-hidden"
     >
-      <div className="h-[12vh] w-full sticky top-0">
+      <div className="h-[12vh] w-full sticky top-0 z-50">
         <Navbar selected={"About Us"} />
       </div>
       <div onClick={() => setMenuOpen(false)} className="sm:w-full w-[80%] max-h-[88vh] md:w-2/3 lg:w-1/2 text-center mt-20">
-        <h1 className="text-5xl text-nowrap font-extrabold mb-8 about-text text-yellow-400">
+        <h1 className="sm:text-5xl text-3xl text-nowrap font-extrabold mb-8 about-text text-yellow-400">
           The Sports Club Family
         </h1>
         <p className="text-lg mb-6 about-text">
