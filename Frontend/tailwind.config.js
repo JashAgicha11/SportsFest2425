@@ -32,7 +32,7 @@ export default {
         general :['General Sans', 'sans-serif'],
         pricedown : ['Pricedown','sans-serif'],
         clash :['Clash Grotesk','sans-serif'],
-        jash : ['Jash','sans-serif']
+        stencil:['Stardos Stencil','sans-serif'],
       }
     },
   },
