@@ -39,18 +39,6 @@ export default function AboutUs() {
         { opacity: 0, y: 50 },
         { opacity: 1, y: 0, duration: 1.5, stagger: 0.3, ease: "power3.out" }
       );
-
-      gsap.fromTo(
-        ".canvas-container",
-        { scale: 0.8, opacity: 0 },
-        {
-          scale: 1,
-          opacity: 1,
-          duration: 1.5,
-          ease: "elastic.out(1, 0.5)",
-          delay: 0.5,
-        }
-      );
     }, containerRef);
 
     return () => ctx.revert();
@@ -80,7 +68,7 @@ export default function AboutUs() {
           spectators alike.
         </p>
       </div>
-      <div className="canvas-container w-[100%] h-[100%] about-text flex items-center">
+      <div className="w-[100%] h-[100%] about-text flex items-center justify-center">
         <Canvas
           style={{
             height: "inherit",
