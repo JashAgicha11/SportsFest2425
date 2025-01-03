@@ -32,7 +32,7 @@ export default {
         general :['General Sans', 'sans-serif'],
         pricedown : ['Pricedown','sans-serif'],
         clash :['Clash Grotesk','sans-serif'],
-        bespoke:['Bespoke Stencil','sans-serif'],
+        jash : ['Jash','sans-serif']
       }
     },
   },

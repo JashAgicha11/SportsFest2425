@@ -64,7 +64,7 @@ const Navbar = ({ selected, bg }) => {
             bg ? `bg-${bg}` : "bg-[#202B38]"
           } flex justify-center items-center rounded-b-3xl sm:rounded-b-[2.5rem]`}
         >
-          <h2 className="text-white text-[1.4rem] px-5 sm:px-0 sm:text-[1.8rem] w-full text-center tracking-widest font-bespoke">
+          <h2 className="text-white text-[1.4rem] px-5 sm:px-0 sm:text-[1.8rem] w-full text-center tracking-widest font-jash">
             {selected}
           </h2>
         </div>

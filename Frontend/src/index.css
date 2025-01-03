@@ -12,6 +12,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base{
+    @font-face {
+        font-family: 'Jash';
+        src: url("./assets/STENCIL.TTF");
+      }
+    }
+
 
 
 
