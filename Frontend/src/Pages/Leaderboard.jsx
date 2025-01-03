@@ -20,7 +20,7 @@ const Leaderboard = () => {
     }
 
     axios
-      .get("http://localhost:5000/api/leaderboard")
+      .get("https://sports-fest2425.vercel.app/leaderboard")
       .then((response) => {
         const sortedLeaderboard = response.data.sort(
           (a, b) => b.points - a.points
