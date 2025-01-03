@@ -22,7 +22,7 @@ const Navbar = ({ selected, bg }) => {
         </Button>
       </div>
       <div
-        className={`w-[30%] z-50 h-screen left-0 sm:static sm:min-w-full sm:h-full rounded-b-lg bg-[#161926] border-b-2 border-[#2D3748] drop-shadow-2xl sm:invert-0 flex transition-transform transform duration-200 ${
+        className={`w-[35%] z-50 h-screen left-0 sm:static sm:min-w-full sm:h-full rounded-b-lg bg-[#161926] border-b-2 border-[#2D3748] drop-shadow-2xl sm:invert-0 flex transition-transform transform duration-200 ${
           menuOpen ? "flex-col " : "flex-row hidden md:flex"
         } sm:justify-around gap-8  sm:items-center text-lg sm:text-2xl text-white font-clash pl-4 pt-3 sm:pt-0 sm:pl-0`}
       >
@@ -58,9 +58,9 @@ const Navbar = ({ selected, bg }) => {
           About Us
         </h2>
       </div>
-      <div className=" backdrop-blur-lg sm:w-full w-[50%] left-[25%] absolute top-0 sm:static  flex justify-center items-center h-[50%] sm:h-[60%]">
+      <div className=" sm:w-full w-[50%] left-[25%] absolute top-0 sm:static  flex justify-center items-center h-[50%] sm:h-[60%]">
         <div
-          className={`h-full border-2 border-[#3f4755] drop-shadow-lg border-t-0 w-fit sm:w-[20%] ${
+          className={`h-full border-2 border-[#3f4755] drop-shadow-lg border-t-0 w-fit sm:w-[22%] ${
             bg ? `bg-${bg}` : "bg-[#202B38]"
           } flex justify-center items-center rounded-b-3xl sm:rounded-b-[2.5rem]`}
         >

@@ -1,13 +1,16 @@
 import React from "react";
 import Navbar from "./Navbar";
+import useStore from "../store/store";
+
 
 const ClanDetails = ({ clan }) => {
+  const {setMenuOpen} = useStore();
   return (
     <div className="w-full min-h-max bg-[#171923] flex flex-col items-center">
       <div className="w-full sticky  scroll-p-10 top-0 h-[12vh]">
         <Navbar selected={clan} bg={clan} />
       </div>
-      <div className="w-[90%] sm:my-[5rem] flex flex-col gap-5 sm:gap-10 justify-around items-center">
+      <div onClick={() => setMenuOpen(false)} className="w-[90%] sm:my-[5rem] flex flex-col gap-5 sm:gap-10 justify-around items-center">
         <div className="w-full h-[90vh] sm:h-[70vh] flex flex-col sm:flex-row justify-around items-center">
           <div className="sm:w-[30%] w-[80%] h-[45%]  sm:h-[100%] bg-white rounded-[2rem]"></div>
           <div className="sm:w-[30%] w-[80%] h-[45%] sm:h-[100%] bg-white rounded-[2rem]"></div>

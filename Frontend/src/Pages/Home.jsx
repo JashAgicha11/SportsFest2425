@@ -8,7 +8,7 @@ const Home = () => {
   const { setMenuOpen } = useStore();
 
   return (
-    <div className="w-full h-screen bg-[#171923] flex flex-col">
+    <div className="w-full max-h-screen h-screen bg-[#171923] flex flex-col">
       <div className="w-full h-[12%] sticky top-0 z-50">
         <Navbar selected={"Welcome"} />
       </div>
@@ -53,7 +53,7 @@ const Home = () => {
             </a>
           </h5>
         </div>
-        <div className="flex flex-col min-w-[33%] items-center text-center text-[0.6rem] sm:text-2xl">
+        <div className="flex flex-col min-w-[33%] items-center text-center text-[1rem] sm:text-2xl">
           <h2>The Sports Club</h2>
           <h3 className="text-xs sm:text-sm">"Faster Smarter Bolder"</h3>
         </div>

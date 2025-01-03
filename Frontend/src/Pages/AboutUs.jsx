@@ -59,12 +59,12 @@ export default function AboutUs() {
   return (
     <div
       ref={containerRef}
-      className="bg-gradient-to-br h-[100vh]  from-gray-800 via-gray-900 to-black text-white min-h-screen flex flex-col items-center overflow-hidden"
+      className="bg-gradient-to-br h-[100vh]  from-gray-800 via-gray-900 to-black text-white flex flex-col items-center overflow-hidden max-w-full"
     >
-      <div className="h-[12vh] w-full sticky top-0 z-50">
+      <div className="h-[12%] min-h-[12%] w-full sticky top-0 z-50 overflow-visible">
         <Navbar selected={"About Us"} />
       </div>
-      <div onClick={() => setMenuOpen(false)} className="sm:w-full w-[80%] max-h-[88vh] md:w-2/3 lg:w-1/2 text-center mt-20">
+      <div onClick={() => setMenuOpen(false)} className="sm:w-full w-[80%] h-[80vh] sm:max-h-[88vh] md:w-2/3 lg:w-1/2 text-center mt-20">
         <h1 className="sm:text-5xl text-3xl text-nowrap font-extrabold mb-8 about-text text-yellow-400">
           The Sports Club Family
         </h1>
