@@ -3,9 +3,13 @@ import { useNavigate } from "react-router-dom";
 import useStore from "../store/store";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Button } from "@mui/material";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
 
 
 const Navbar = ({ selected, bg }) => {
+
+  
   const {menuOpen, setMenuOpen} = useStore();
   const navigate = useNavigate();
   // const {selected,setSelected} = useStore()

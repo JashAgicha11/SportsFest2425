@@ -3,6 +3,8 @@ import classNames from "classnames";
 import { useNavigate } from 'react-router-dom';
 import useStore from '../store/store';
 import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
 
 const ClanBox = ({ colour, ClanName }) => {
   const navigate = useNavigate();
@@ -44,13 +46,30 @@ const ClanBox = ({ colour, ClanName }) => {
       smoothOrigin: true,
     });
   };
+  useGSAP(() => {
+    gsap.fromTo(
+      ".Clans",
+      {
+        opacity: 0,
+        x: -50,
+        ease: "power2.out", // Smooth easing
+      },
+      {
+        opacity: 1,
+        x: 0,
+        delay: 0.5,
+        stagger: 0.2, // Shorter stagger for a fluid sequence
+      }
+    );
+  }, []);
+  
 
   return (
     <div
       ref={boxRef}
       onClick={() => handleClick(colour)}
       className={classNames(
-        "sm:w-[45%] w-[90%] h-[40%] z-10 cursor-pointer rounded-lg text-white flex justify-start items-center border border-opacity-40 drop-shadow-lg transform transition-transform duration-300",
+        "Clans sm:w-[45%] w-[90%] h-[40%] z-10 cursor-pointer rounded-lg text-white flex justify-start items-center border border-opacity-40 drop-shadow-lg transform transition-transform duration-300",
         {
           "bg-Titans ": colour === "Titans",
           "bg-Mavericks ": colour === "Mavericks",

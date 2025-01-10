@@ -5,6 +5,8 @@ import { OrbitControls, Sparkles } from "@react-three/drei"
 import * as THREE from "three";
 import Navbar from "../components/Navbar";
 import useStore from "../store/store";
+import { useGSAP } from "@gsap/react";
+
 
 
 // Rotating 3D Sports Logo Component
@@ -44,12 +46,29 @@ export default function AboutUs() {
     return () => ctx.revert();
   }, []);
 
+  useGSAP(() => {
+      gsap.fromTo(
+        ".Navbar",
+        {
+          opacity: 0,
+          y: -20,
+          ease: "power1.inOut",
+        },
+        {
+          opacity: 1,
+          y: 0,
+          delay: 0.5,
+          stagger: 0.2,
+        }
+      );
+    }, []);
+
   return (
     <div
       ref={containerRef}
       className="bg-gradient-to-br h-[100vh]  from-gray-800 via-gray-900 to-black text-white flex flex-col items-center overflow-hidden max-w-full"
     >
-      <div className="h-[12%] min-h-[12%] w-full sticky top-0 z-50 overflow-visible">
+      <div className="Navbar h-[12%] min-h-[12%] w-full sticky top-0 z-50 overflow-visible">
         <Navbar selected={"About Us"} />
       </div>
       <div onClick={() => setMenuOpen(false)} className="sm:w-full w-[80%] h-[80vh] sm:max-h-[88vh] md:w-2/3 lg:w-1/2 text-center mt-20">

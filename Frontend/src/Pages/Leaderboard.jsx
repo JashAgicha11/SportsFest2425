@@ -3,7 +3,10 @@ import axios from "axios";
 import Navbar from "../components/Navbar";
 import ClanUpdateModal from "../components/ClanUpdateModal";
 import useStore from "../store/store";
+
 import { useNavigate } from "react-router-dom";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Leaderboard = () => {
   const [leaderboard, setLeaderboard] = useState([]);
@@ -36,14 +39,31 @@ const Leaderboard = () => {
     setLeaderboard(updatedLeaderboard);
   };
 
+  useGSAP(() => {
+    gsap.fromTo(
+      ".Navbar",
+      {
+        opacity: 0,
+        y: -20,
+        ease: "power1.inOut",
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 0.5,
+        stagger: 0.2,
+      }
+    );
+  }, []);
+
   return (
     <div  className="max-w-full h-screen bg-[#171923] flex flex-col">
-      <div className="w-full h-[12%] sticky top-0">
+      <div className="Navbar w-full h-[12%] sticky top-0">
         <Navbar selected={"Leaderboard"} />
       </div>
       <div
       onClick={() => setMenuOpen(false)}
-        className={`w-full flex flex-col justify-center items-center sm:[80%] h-[60%] ${
+        className={`Navbar w-full flex flex-col justify-center items-center sm:[80%] h-[60%] ${
           isAdminLogin ? "mt-20" : "mt-20"
         } overflow-auto`}
       >

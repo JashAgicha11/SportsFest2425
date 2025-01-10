@@ -1,36 +1,100 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import ConnectBtn from "../components/ConnectBtn";
 import { Instagram, Linkedin, Twitter } from "../Assets";
 import useStore from "../store/store";
+import { gsap } from "gsap";
 
 const Home = () => {
   const { setMenuOpen } = useStore();
 
+  useEffect(() => {
+    gsap.fromTo(
+      ".Navbar",
+      {
+        opacity: 0,
+        y: -20,
+        ease: "power1.inOut",
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 0.5,
+        stagger: 0.2,
+      }
+    );
+
+    gsap.fromTo(
+      ".Footer",
+      {
+        opacity: 0,
+        y: 20,
+        ease: "power1.inOut",
+      },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 1,
+        stagger: 0.2,
+      }
+    );
+
+    gsap.fromTo(
+      ".animated-letter",
+      {
+        opacity: 0,
+        y: 20,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.1, 
+        delay:1,
+        ease: "power2.out",
+      }
+    );
+  }, []);
+
+  const title = '"Sports Fest 2025"';
+
   return (
-    <div className="w-full max-h-screen h-screen bg-[#171923] flex flex-col">
-      <div className="w-full h-[12%] sticky top-0 z-50">
+    <div className="w-full overflow-hidden max-h-screen h-screen bg-[#171923] flex flex-col">
+      
+      <div className="Navbar w-full h-[12%] sticky top-0 z-50">
         <Navbar selected={"Welcome"} />
       </div>
+
+      
       <div
         onClick={() => setMenuOpen(false)}
-        className="w-full h-[38%] font-clash text-white relative sm:top-[2rem] flex flex-col leading-10 text-2xl justify-center items-center px-4 sm:px-6 md:px-8 text-center"
+        className="Navbar w-full h-[38%] font-clash text-white relative sm:top-[2rem] flex flex-col leading-10 text-2xl justify-center items-center px-4 sm:px-6 md:px-8 text-center"
       >
-        <h2 className="text-lg sm:text-xl md:text-2xl">
-          Ahmedabad University's
-        </h2>
+        <h2 className="text-lg sm:text-xl md:text-2xl">Ahmedabad University's</h2>
         <h3 className="text-lg sm:text-xl md:text-2xl">The Sports Club</h3>
         <h3 className="text-lg sm:text-xl md:text-2xl">Presents</h3>
-        <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[4rem] leading-[3rem] sm:leading-[3.5rem] md:leading-[4rem] font-trench">
-          "Sports Fest 2025"
+        <h1 className="sports text-ellipsis z-10 text-[2.5rem] sm:text-[3rem] md:text-[4rem] leading-[3rem] sm:leading-[3.5rem] md:leading-[4rem] font-trench">
+          {title.split("").map((letter, index) => (
+            <span
+              key={index}
+              className={`animated-letter inline-block ${
+                letter === " " ? "w-2" : ""
+              }`}
+            >
+              {letter}
+            </span>
+          ))}
         </h1>
       </div>
+
+      
       <div className="w-full h-[40%]">
         <p className="text-center text-white px-4 sm:px-6 md:px-8">
           {/* Add content here */}
         </p>
       </div>
-      <footer className="bg-[#202B38] w-full h-[10%] text-[0.6rem] sm:text-lg font-clash flex sm:flex-row justify-around items-center text-white px-4 sm:px-6 md:px-8">
+
+      
+      <footer className="Footer bg-[#202B38] w-full h-[10%] text-[0.6rem] sm:text-lg font-clash flex sm:flex-row justify-around items-center text-white px-4 sm:px-6 md:px-8">
         <div className="flex flex-col min-w-[31%] w-[33%] justify-center items-center">
           <h2>
             Created By :-{" "}
@@ -49,7 +113,7 @@ const Home = () => {
               target="_blank"
               className="underline text-bold"
             >
-               Harsh Panchal
+              Harsh Panchal
             </a>
           </h5>
         </div>
