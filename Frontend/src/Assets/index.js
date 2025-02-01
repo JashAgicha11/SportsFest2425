@@ -26,6 +26,7 @@ import Hansika from "./Hansika.jpeg"
 // import Hiya from "./Hiya.jpeg"
 import Hevit from "./Hevit.jpeg"
 import Devanshi from "./Devanshi.jpeg"
+import Person from "./person.jpg"
 // import HeerG from "./HeerG.jpeg"
 import Jay from "./Jay.jpeg"
 import Himay from "./Himay.jpeg"
@@ -52,6 +53,7 @@ export{
     Kush,
     // Abhimanyu,
     // Dev,
+    Person,
     // Khush,
     Suhail,
     Hansika,
