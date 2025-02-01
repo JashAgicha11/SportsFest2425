@@ -55,7 +55,7 @@ export const clans = {
       { role: "Co-Leader", name: "Hansika Garg", img: Hansika},
       { role: "Committee", name: "Dev Parekh", img: Dev },
       { role: "Committee", name: "Hevit Makavana", img: Hevit },
-      { role: "Committee", name: "Hiya Patel", img: Jash },
+      { role: "Committee", name: "Hiya Patel", img: Person },
       { role: "Committee", name: "Suhail Rushainwala", img: Suhail },
     ],Predators: [
         { role: "Leader", name: "Abhimanyu Dahiya", img: Person },
@@ -65,7 +65,7 @@ export const clans = {
         { role: "Committee", name: "Jay Gandhi", img: Jay },
         { role: "Committee", name: "Josh Sheth", img: Josh },
         { role: "Committee", name: "Rajvi Patel", img: Rajvi },
-        { role: "Committee", name: "Shlok Shah", img: Jash },  
+        { role: "Committee", name: "Shlok Shah", img: Person },  
       ],Mavericks: [
         { role: "Leader", name: "Adyut Arora", img: Person },
         { role: "Mentor", name: "Devanshi Singh", img: Devanshi },

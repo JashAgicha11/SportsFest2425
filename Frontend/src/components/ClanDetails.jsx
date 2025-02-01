@@ -29,7 +29,7 @@ const ClanDetails = ({ clan }) => {
           {clanMembers.slice(0, 2).map((member, index) => (
             <div
               key={index}
-              className="relative sm:w-[30%] w-[80%] h-[45%] sm:h-[100%] bg-white rounded-[2rem] overflow-hidden"
+              className="relative sm:w-[30%] w-[80%] h-[45%] sm:h-[100%] bg-black rounded-[2rem] overflow-hidden"
             >
               <img
                 className="object-cover w-full h-full"
