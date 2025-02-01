@@ -67,12 +67,12 @@ const Home = () => {
       
       <div
         onClick={() => setMenuOpen(false)}
-        className="Navbar w-full h-[38%] font-clash text-white relative sm:top-[2rem] flex flex-col leading-10 text-2xl justify-center items-center px-4 sm:px-6 md:px-8 text-center"
+        className="Navbar w-full h-[30%] sm:h-[38%] font-clash text-white relative sm:top-[2rem] flex flex-col leading-10 text-2xl justify-center items-center px-4 sm:px-6 md:px-8 text-center"
       >
-        <h2 className="text-lg sm:text-xl md:text-2xl">Ahmedabad University's</h2>
-        <h3 className="text-lg sm:text-xl md:text-2xl">The Sports Club</h3>
-        <h3 className="text-lg sm:text-xl md:text-2xl">Presents</h3>
-        <h1 className="sports text-ellipsis z-10 text-[2.5rem] sm:text-[3rem] md:text-[4rem] leading-[3rem] sm:leading-[3.5rem] md:leading-[4rem] font-trench">
+        <h2 className="text-xl sm:text-xl md:text-2xl">Ahmedabad University's</h2>
+        <h3 className="text-xl sm:text-xl md:text-2xl">The Sports Club</h3>
+        <h3 className="text-xl sm:text-xl md:text-2xl">Presents</h3>
+        <h1 className="sports relative top-[2rem] sm:top-4 text-ellipsis z-10 text-[2.5rem] sm:text-[3rem] md:text-[4rem] leading-[3rem] sm:leading-[3.5rem] md:leading-[4rem] font-trench">
           {title.split("").map((letter, index) => (
             <span
               key={index}
@@ -87,8 +87,8 @@ const Home = () => {
       </div>
 
       
-      <div className="w-full h-[60%] sm:h-[40%] flex justify-center items-start sm:items-center">
-        <p className="Navbar text-center text-white px-4 sm:px-6 md:px-8 font-trench sm:mt-3 w-[80%] sm:w-[60%] flex justify-center items-center" >
+      <div className="w-full  h-[60%] sm:h-[40%] flex justify-center items-center sm:items-center">
+        <p className="Navbar text-center text-white text-lg px-4 sm:px-6 md:px-8 font-trench sm:mt-3 w-[90%] sm:w-[60%] flex justify-center items-center" >
         This is Sports Fest! It’s not just about the games—it’s about the intensity, the drama, and those match-turning moments that get your heart racing. The rivalries may get heated, the stakes feel high, and every play could change the game. But at the end of it all, it’s about the thrill, the energy, and the pure joy of coming together. Get ready to feel the adrenaline, bring your A-game, and let the fun take over!
         </p>
       </div>
