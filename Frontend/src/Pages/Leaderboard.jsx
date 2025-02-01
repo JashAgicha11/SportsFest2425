@@ -58,7 +58,7 @@ const Leaderboard = () => {
 
   return (
     <div  className="max-w-full h-screen bg-[#171923] flex flex-col">
-      <div className="Navbar w-full h-[12%] sticky top-0">
+      <div className="Navbar w-full h-[12%] sticky top-0 z-10">
         <Navbar selected={"Leaderboard"} />
       </div>
       <div
