@@ -87,7 +87,7 @@ const Home = () => {
       </div>
 
       
-      <div className="w-full h-[60%] sm:h-[40%] flex justify-center items-start">
+      <div className="w-full h-[60%] sm:h-[40%] flex justify-center items-start sm:items-center">
         <p className="Navbar text-center text-white px-4 sm:px-6 md:px-8 font-trench sm:mt-3 w-[80%] sm:w-[60%] flex justify-center items-center" >
         This is Sports Fest! It’s not just about the games—it’s about the intensity, the drama, and those match-turning moments that get your heart racing. The rivalries may get heated, the stakes feel high, and every play could change the game. But at the end of it all, it’s about the thrill, the energy, and the pure joy of coming together. Get ready to feel the adrenaline, bring your A-game, and let the fun take over!
         </p>
