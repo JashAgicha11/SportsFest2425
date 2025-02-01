@@ -1,46 +1,123 @@
-import { Basketball, Volleyball, Cricket, Kabbadi, KhoKho, Football, Closing } from "../Assets";
+import {
+  Basketball,
+  Volleyball,
+  Cricket,
+  Kabbadi,
+  KhoKho,
+  Football,
+  Closing,
+  Shriti,
+  Rahul,
+  Satvik,
+  Jash,
+  Daksh,
+  Himanshu,
+  Krisil,
+  Devanshi,
+  Deep,
+  Misha,
+  Parthraj,
+  Krina,
+  Dev,
+  Kush,
+  // Abhimanyu,
+  // Aditya,
+  Suhail,
+  Heet,
+  Hansika,
+  // HeerG,
+  // Hiya,
+  // Suhail,
+  Hevit,
+  Himay,
+  Josh,
+  Jay,
+  Rajvi,
 
-export const fixtures =[
-    {
-        game: "Volleyball",
-        date : "25th & 26th Jan",
-        img:Volleyball,
-        teams :56
-    },
-    {
-        game: "Basketball",
-        date : "1st & 2nd Feb",
-        img:Basketball,
-        teams :56
-    },
-    {
-        game:"Cricket",
-        date: "19th & 22nd Feb",
-        img: Cricket,
-        teams :56
-    },
-    {
-        game:"Kabbadi",
-        date: "1st March",
-        img: Kabbadi,
-        teams :56
-    },
-    {
-        game:"KhoKho",
-        date: "8th & 9th March",
-        img: KhoKho,
-        teams :56
-    },
-    {
-        game:"Football",
-        date: "15th & 16th March",
-        img:Football,
-        teams :56
-    },{
-        game:"Closing Ceremony",
-        date: "26th March",
-        img: Closing,
-        teams :0
-    }
+} from "../Assets";
 
-]
+export const clans = {
+    Titans: [
+      { role: "Leader", name: "Rahul Thakkar", img: Rahul },
+      { role: "Mentor", name: "Satvik Yadav", img: Satvik },
+      { role: "Co-Leader", name: "Shriti Buddhdev", img: Shriti },
+      { role: "Co-Leader", name: "Daksh Hirapara", img: Daksh },
+      { role: "Committee", name: "Himanshu Murjani", img: Himanshu },
+      { role: "Committee", name: "Jash Agicha", img: Jash },
+      { role: "Committee", name: "Krina Patel", img: Krina },
+      { role: "Committee", name: "Krisil Rathwa", img: Krisil },
+    ],
+    Warriors: [
+      { role: "Leader", name: "Parthraj Vaghela", img: Parthraj },
+      { role: "Mentor", name: "Kush Golecha", img: Kush },
+      { role: "Co-Leader", name: "Khush Mehta", img: Jash },
+      { role: "Co-Leader", name: "Hansika Garg", img: Hansika},
+      { role: "Committee", name: "Dev Parekh", img: Dev },
+      { role: "Committee", name: "Hevit Makavana", img: Hevit },
+      { role: "Committee", name: "Hiya Patel", img: Jash },
+      { role: "Committee", name: "Suhail Rushainwala", img: Suhail },
+    ],Predators: [
+        { role: "Leader", name: "Abhimanyu Dahiya", img: Jash },
+        { role: "Mentor", name: "Aditya Bhatt", img: Jash },
+        { role: "Co-Leader", name: "Heer Choradiya", img: Jash },
+        { role: "Co-Leader", name: "Himay Thakkar", img: Himay },
+        { role: "Committee", name: "Jay Gandhi", img: Jay },
+        { role: "Committee", name: "Josh Sheth", img: Josh },
+        { role: "Committee", name: "Rajvi Patel", img: Rajvi },
+        { role: "Committee", name: "Shlok Shah", img: Jash },  
+      ],Mavericks: [
+        { role: "Leader", name: "Adyut Arora", img: Jash },
+        { role: "Mentor", name: "Devanshi Singh", img: Devanshi },
+        { role: "Co-Leader", name: "Heer Gandhi", img: Jash},
+        { role: "Co-Leader", name: "Shalin Bhavsar", img: Jash },
+        { role: "Committee", name: "Deep Hapani", img: Deep },
+        { role: "Committee", name: "Dhruv Dalal", img: Jash },
+        { role: "Committee", name: "Misha Bajaj", img: Misha },
+        { role: "Committee", name: "Heet Shah", img: Heet },
+      ],
+    // Add more clans here...
+  };
+export const fixtures = [
+  {
+    game: "Basketball",
+    date: "12th, 15th & 16th Feb",
+    img: Basketball,
+    teams: 56,
+  },
+  {
+    game: "Football",
+    date: "22nd & 23rd Feb",
+    img: Football,
+    teams: 56,
+  },
+  {
+    game: "Kho-Kho",
+    date: "16th Mar",
+    img: KhoKho,
+    teams: 56,
+  },
+  {
+    game: "Cricket",
+    date: "19, 22, 26 & 29th Mar",
+    img: Cricket,
+    teams: 56,
+  },
+  {
+    game: "Kabaddi",
+    date: "23rd March",
+    img: Kabbadi,
+    teams: 56,
+  },
+  {
+    game: "Volleyball",
+    date: "30th Mar, 2nd & 5th April",
+    img: Volleyball,
+    teams: 56,
+  },
+  {
+    game: "Closing Ceremony",
+    date: "9th April",
+    img: Closing,
+    teams: 0,
+  },
+];
