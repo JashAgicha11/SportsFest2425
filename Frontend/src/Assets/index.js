@@ -17,26 +17,31 @@ import Himanshu from "./Himanshu.jpeg"
 import Krisil from "./Krisil.jpeg"
 import Parthraj from "./Parthraj.jpeg"
 import Kush from "./Kush.jpeg"
-// import Abhimanyu from "./Abhimanyu.jpeg"
+import Abhimanyu from "./Abhimanyu.jpg"
+import Adyut from "./Adyut.jpg"
 import Krina from "./Krina.jpg"
 import Dev from "./Dev.jpeg"
 import Heet from "./Heet.jpeg"
 import Suhail from "./Suhail.jpeg"
 import Hansika from "./Hansika.jpeg"
-// import Hiya from "./Hiya.jpeg"
+import Hiya from "./Hiya.jpg"
 import Hevit from "./Hevit.jpeg"
 import Devanshi from "./Devanshi.jpeg"
 import Person from "./Person.jpeg"
-// import HeerG from "./HeerG.jpeg"
+import HeerG from "./HeerG.jpg"
 import Jay from "./Jay.jpeg"
 import Himay from "./Himay.jpeg"
 import Josh from "./Josh.jpeg"
-// import Aditya from "./Aditya.jpeg"
-// import Shlok from "./Shlok.jpeg"
+import Aditya from "./Aditya.jpg"
+import Shlok from "./Shlok.jpg"
 import Rajvi from "./Rajvi.jpeg"
 import Deep from "./Deep.jpeg"
 import Misha from "./Misha.jpeg"
-// import Dhruv from "./Dhruv.jpeg"
+import Dhruv from "./Dhruv.jpg"
+import Shalin from "./Shalin.jpg"
+import Khush from "./Khush.jpg"
+// import Suhail from "./Suhail.jpeg"
+
 export{ 
     Rahul,
     Devanshi,
@@ -44,27 +49,28 @@ export{
     Heet,
     Daksh,
     Dev,
+    Adyut,
     Satvik,
     Deep,
-    // Dhruv,
+    Dhruv,
     Himanshu,
+    Shalin,
     Krisil,
     Parthraj,
     Kush,
-    // Abhimanyu,
-    // Dev,
+    Abhimanyu,
     Person,
-    // Khush,
+    Khush,
     Suhail,
     Hansika,
-    // Hiya,
+    Hiya,
     Hevit,
-    // HeerG,
+    HeerG,
     Jay,
     Himay,
     Josh,
-    // Aditya,
-    // Shlok,
+    Aditya,
+    Shlok,
     Krina,
     Shriti,
     Jash,
