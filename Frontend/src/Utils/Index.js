@@ -49,7 +49,7 @@ export const clans = {
       { role: "Leader", name: "Rahul Thakkar", img: Rahul },
       { role: "Mentor", name: "Satvik Yadav", img: Satvik },
       { role: "Co-Leader", name: "Shriti Buddhdev", img: Shriti },
-      { role: "Co-Leader", name: "Daksh Hirapara", img: Daksh },
+      { role: "Co-Leader", name: "Daksh Hirpara", img: Daksh },
       { role: "Committee", name: "Himanshu Murjani", img: Himanshu },
       { role: "Committee", name: "Jash Agicha", img: Jash },
       { role: "Committee", name: "Krina Patel", img: Krina },

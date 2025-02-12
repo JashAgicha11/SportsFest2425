@@ -61,17 +61,17 @@ export default function AboutUs() {
   // OB Members Data
   const obMembers = [
     {
-      name: "John Doe",
+      name: "Mahim Thakkar",
       role: "Secretary",
       img: "/images/secretary.jpg",
     },
     {
-      name: "Jane Smith",
+      name: "Anah Patel",
       role: "Joint Secretary",
       img: "/images/joint_secretary.jpg",
     },
     {
-      name: "Michael Lee",
+      name: "Avik Shah",
       role: "Treasurer",
       img: "/images/treasurer.jpg",
     },
