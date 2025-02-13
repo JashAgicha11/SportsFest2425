@@ -90,7 +90,7 @@ export default function AboutUs() {
 
       <div
         onClick={() => setMenuOpen(false)}
-        className="sm:w-full w-[80%] mb-28 md:mb-0 h-[40vh] sm:max-h-[88vh] md:w-2/3 lg:w-1/2 text-center mt-20"
+        className="sm:w-full w-[80%] mb-28 md:mb-0 h-[40vh] sm:max-h-[88vh] md:w-2/3 lg:w-1/2 text-center mt-10 md:mt-20"
       >
         <h1 className="sm:text-5xl text-3xl font-extrabold mb-8 about-text text-yellow-400">
           The Sports Club Family
