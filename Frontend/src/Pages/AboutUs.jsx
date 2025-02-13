@@ -5,6 +5,7 @@ import { OrbitControls } from "@react-three/drei";
 import Navbar from "../components/Navbar";
 import useStore from "../store/store";
 import { useGSAP } from "@gsap/react";
+import { Anah, Avik, Mahim } from "../Assets/index.js";
 
 // Rotating 3D Sports Logo Component
 function RotatingCube() {
@@ -60,35 +61,36 @@ export default function AboutUs() {
 
   // OB Members Data
   const obMembers = [
-    {
-      name: "Mahim Thakkar",
-      role: "Secretary",
-      img: "/images/secretary.jpg",
-    },
+    
     {
       name: "Anah Patel",
       role: "Joint Secretary",
-      img: "/images/joint_secretary.jpg",
+      img: Anah,
+    },
+    {
+      name: "Mahim Thakkar",
+      role: "Secretary",
+      img: Mahim,
     },
     {
       name: "Avik Shah",
       role: "Treasurer",
-      img: "/images/treasurer.jpg",
+      img: Avik,
     },
   ];
 
   return (
     <div
       ref={containerRef}
-      className="bg-gradient-to-br h-[100vh] from-gray-800 via-gray-900 to-black text-white flex flex-col items-center overflow-hidden max-w-full"
+      className="bg-gradient-to-br min-h-[100vh] from-gray-800 via-gray-900 to-black text-white flex flex-col items-center overflow-hidden max-w-full"
     >
-      <div className="Navbar h-[12%] min-h-[12%] w-full sticky top-0 z-50 overflow-visible">
+      <div className="Navbar min-h-[12vh] h-[12vh] w-full sticky top-0 z-50 overflow-visible">
         <Navbar selected={"About Us"} />
       </div>
 
       <div
         onClick={() => setMenuOpen(false)}
-        className="sm:w-full w-[80%] h-[80vh] sm:max-h-[88vh] md:w-2/3 lg:w-1/2 text-center mt-20"
+        className="sm:w-full w-[80%] h-[40vh] sm:max-h-[88vh] md:w-2/3 lg:w-1/2 text-center mt-20"
       >
         <h1 className="sm:text-5xl text-3xl font-extrabold mb-8 about-text text-yellow-400">
           The Sports Club Family
@@ -107,13 +109,13 @@ export default function AboutUs() {
       </div>
 
       {/* OB Members Section */}
-      <div className="w-full h-[90vh] sm:h-[70vh]  flex sm:flex-row justify-around border-2 items-center">
+      <div className="w-full h-[90vh] sm:h-[70vh] flex  flex-col md:flex-row justify-around items-center">
        
-        <div className="flex sm:flex-row  sm:w-[60%] h-[45%] sm:h-[60%] justify-around items-center">
+        <div className="flex flex-col md:flex-row w-full  sm:w-[60%] h-[90%] sm:h-[60%] justify-around items-center gap-10">
           {obMembers.slice(0, 3).map((member, index) => (
             <div
               key={index}
-              className="relative w-[20%] sm:w-[45%] h-[100%] bg-black rounded-[2rem] overflow-hidden"
+              className="relative w-[70%] sm:w-[60%] h-[100%] bg-black rounded-[2rem] overflow-hidden"
             >
               <img
                 className="object-cover w-full h-full"

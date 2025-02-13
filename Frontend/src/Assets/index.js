@@ -22,10 +22,14 @@ import Adyut from "./Adyut.jpg"
 import Krina from "./Krina.jpg"
 import Dev from "./Dev.jpeg"
 import Heet from "./Heet.jpeg"
+import HeerC from "./HeerC.jpg"
 import Suhail from "./Suhail.jpeg"
 import Hansika from "./Hansika.jpeg"
 import Hiya from "./Hiya.jpg"
 import Hevit from "./Hevit.jpeg"
+import Mahim from "./Mahim.jpeg"
+import Anah from "./Anah.jpeg"
+import Avik from "./Avik.jpeg"
 import Devanshi from "./Devanshi.jpeg"
 import Person from "./Person.jpeg"
 import HeerG from "./HeerG.jpg"
@@ -46,7 +50,11 @@ export{
     Rahul,
     Devanshi,
     Misha,
+    Mahim,
+    Avik,
+    Anah,
     Heet,
+    HeerC,
     Daksh,
     Dev,
     Adyut,

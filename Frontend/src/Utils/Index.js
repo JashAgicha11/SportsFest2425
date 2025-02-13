@@ -38,8 +38,8 @@ import {
   Dhruv,
   Shlok,
   Khush,
-  // HeerC
-  Person,
+  HeerC
+  // Person,
 
 
 } from "../Assets";
@@ -67,7 +67,7 @@ export const clans = {
     ],Predators: [
         { role: "Leader", name: "Abhimanyu Dahiya", img: Abhimanyu },
         { role: "Mentor", name: "Aditya Bhatt", img: Aditya },
-        { role: "Co-Leader", name: "Heer Choradiya", img: Person },
+        { role: "Co-Leader", name: "Heer Choradiya", img: HeerC },
         { role: "Co-Leader", name: "Himay Thakkar", img: Himay },
         { role: "Committee", name: "Jay Gandhi", img: Jay },
         { role: "Committee", name: "Josh Sheth", img: Josh },
