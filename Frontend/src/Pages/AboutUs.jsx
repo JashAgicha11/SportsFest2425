@@ -37,6 +37,19 @@ export default function AboutUs() {
         { opacity: 0, y: 50 },
         { opacity: 1, y: 0, duration: 1.5, stagger: 0.3, ease: "power3.out" }
       );
+
+      gsap.fromTo(
+        ".ob-member",
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.5,
+          stagger: 0.3,
+          ease: "power3.out",
+          delay: 0.5,
+        }
+      );
     }, containerRef);
 
     return () => ctx.revert();
@@ -61,7 +74,6 @@ export default function AboutUs() {
 
   // OB Members Data
   const obMembers = [
-    
     {
       name: "Anah Patel",
       role: "Joint Secretary",
@@ -109,13 +121,12 @@ export default function AboutUs() {
       </div>
 
       {/* OB Members Section */}
-      <div className="w-full h-[90vh] sm:h-[70vh] flex  flex-col md:flex-row justify-around items-center">
-       
-        <div className="flex flex-col md:flex-row w-full  sm:w-[60%] h-[90%] sm:h-[60%] justify-around items-center gap-10">
+      <div className="Navbar w-full h-[90vh] sm:h-[70vh] flex  flex-col md:flex-row justify-around items-center">
+        <div className="flex flex-col md:flex-row w-full sm:w-[60%] h-[90%] sm:h-[60%] justify-around items-center gap-10">
           {obMembers.slice(0, 3).map((member, index) => (
             <div
               key={index}
-              className="relative w-[70%] sm:w-[60%] h-[100%] bg-black rounded-[2rem] overflow-hidden"
+              className="relative w-[70%] sm:w-[60%] h-[100%] bg-black rounded-[2rem] overflow-hidden ob-member"
             >
               <img
                 className="object-cover w-full h-full"
